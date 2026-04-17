@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
-
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var movieType: UILabel!
@@ -22,17 +20,8 @@ class DetailsViewController: UIViewController {
             movieTitle.text = movie.title
             movieYear.text = "\(movie.relaseYear)"
             movieRate.text = "\(movie.rating)"
-            if let url = URL(string: movie.image) {
-                DispatchQueue.global().async {
-                    if let data = try? Data(contentsOf: url),
-                       let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self.movieImage.image = image
-                        }
-                    }
-                }
-            }
+            movieImage.image = UIImage(named: movie.image)
+            movieType.text = "\(movie.genre)"
         }
     }
-    
 }

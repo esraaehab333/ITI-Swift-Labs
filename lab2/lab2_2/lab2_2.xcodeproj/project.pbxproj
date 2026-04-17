@@ -53,8 +53,6 @@
 		BA526C932F90D47C00576EC9 /* lab2_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab2_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA526CA02F90D51E00576EC9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		BA526CA52F91274A00576EC9 /* SDWebImageLinkPlugin-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SDWebImageLinkPlugin-master"; path = "../../../../Downloads/SDWebImageLinkPlugin-master"; sourceTree = "<group>"; };
-		BA526CA62F91308300576EC9 /* SDWebImage-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SDWebImage-master"; path = "../../../../Downloads/SDWebImage-master"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +83,11 @@
 		BA526C642F90D47900576EC9 = {
 			isa = PBXGroup;
 			children = (
-				BA526CA42F91274A00576EC9 /* Packages */,
 				BA526C6F2F90D47A00576EC9 /* lab2_2 */,
 				BA526C862F90D47C00576EC9 /* lab2_2Tests */,
 				BA526C902F90D47C00576EC9 /* lab2_2UITests */,
 				BA526C6E2F90D47A00576EC9 /* Products */,
+				BA84CD742F92610E009E4BFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,13 +134,11 @@
 			path = lab2_2UITests;
 			sourceTree = "<group>";
 		};
-		BA526CA42F91274A00576EC9 /* Packages */ = {
+		BA84CD742F92610E009E4BFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA526CA52F91274A00576EC9 /* SDWebImageLinkPlugin-master */,
-				BA526CA62F91308300576EC9 /* SDWebImage-master */,
 			);
-			name = Packages;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +157,8 @@
 			dependencies = (
 			);
 			name = lab2_2;
+			packageProductDependencies = (
+			);
 			productName = lab2_2;
 			productReference = BA526C6D2F90D47A00576EC9 /* lab2_2.app */;
 			productType = "com.apple.product-type.application";
