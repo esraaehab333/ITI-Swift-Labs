@@ -4,10 +4,21 @@
 //
 //  Created by Nemo on 16/04/2026.
 //
-
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource , AddMovieDelegate{
+    
+    func addMovie(movie: Movie) {
+        listOfMovies.append(movie)
+        tableView.reloadData()
+    }
+    @IBAction func addMovie(_ sender: UIButton) {
+        if let addVC = storyboard?.instantiateViewController(identifier: "addMovieVC") as? AddMovieViewController {
+               addVC.delegate = self
+               navigationController?.pushViewController(addVC, animated: true)
+           }
+    }
+    @IBOutlet weak var tableView: UITableView!
     var listOfMovies: [Movie] = [
         Movie(
             title: "Inception",
@@ -38,10 +49,14 @@ class ViewController: UITableViewController {
             genre: ["Action", "Sci-Fi"]
         )
     ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let detailsVC = storyboard?.instantiateViewController(identifier: "detailsVC") as? DetailsViewController {
             let selectedMovie = listOfMovies[indexPath.row]
@@ -50,15 +65,15 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(detailsVC, animated: true)
         }
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         listOfMovies.count
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell :UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = listOfMovies[indexPath.row].title
         cell.imageView?.image = UIImage(named: listOfMovies[indexPath.row].image)
         return cell
     }
 }
-

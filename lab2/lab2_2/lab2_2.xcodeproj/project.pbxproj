@@ -18,6 +18,8 @@
 		BA526C942F90D47C00576EC9 /* lab2_2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526C932F90D47C00576EC9 /* lab2_2UITestsLaunchTests.swift */; };
 		BA526CA12F90D51E00576EC9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526CA02F90D51E00576EC9 /* Movie.swift */; };
 		BA526CA32F911ABD00576EC9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */; };
+		BA5CCD322F9399E00036F5D1 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */; };
+		BA5CCD342F93A1640036F5D1 /* AddMovieDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BA526C932F90D47C00576EC9 /* lab2_2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab2_2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA526CA02F90D51E00576EC9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
+		BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				BA526C7E2F90D47C00576EC9 /* Info.plist */,
 				BA526CA02F90D51E00576EC9 /* Movie.swift */,
 				BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */,
+				BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */,
+				BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */,
 			);
 			path = lab2_2;
 			sourceTree = "<group>";
@@ -281,7 +287,9 @@
 				BA526C712F90D47A00576EC9 /* AppDelegate.swift in Sources */,
 				BA526CA12F90D51E00576EC9 /* Movie.swift in Sources */,
 				BA526C732F90D47A00576EC9 /* SceneDelegate.swift in Sources */,
+				BA5CCD342F93A1640036F5D1 /* AddMovieDelegate.swift in Sources */,
 				BA526CA32F911ABD00576EC9 /* DetailsViewController.swift in Sources */,
+				BA5CCD322F9399E00036F5D1 /* AddMovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
