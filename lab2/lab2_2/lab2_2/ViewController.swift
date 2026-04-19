@@ -71,9 +71,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = listOfMovies[indexPath.row].title
-        cell.imageView?.image = UIImage(named: listOfMovies[indexPath.row].image)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
+        cell.movieTitle.text = listOfMovies[indexPath.row].title
+        cell.movieImage.image = UIImage(named: listOfMovies[indexPath.row].image)
         return cell
     }
 }

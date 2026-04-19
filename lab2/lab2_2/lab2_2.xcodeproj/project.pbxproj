@@ -20,6 +20,7 @@
 		BA526CA32F911ABD00576EC9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */; };
 		BA5CCD322F9399E00036F5D1 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */; };
 		BA5CCD342F93A1640036F5D1 /* AddMovieDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */; };
+		BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieDelegate.swift; sourceTree = "<group>"; };
+		BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */,
 				BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */,
 				BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */,
+				BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */,
 			);
 			path = lab2_2;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA526C752F90D47A00576EC9 /* ViewController.swift in Sources */,
+				BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */,
 				BA526C712F90D47A00576EC9 /* AppDelegate.swift in Sources */,
 				BA526CA12F90D51E00576EC9 /* Movie.swift in Sources */,
 				BA526C732F90D47A00576EC9 /* SceneDelegate.swift in Sources */,
