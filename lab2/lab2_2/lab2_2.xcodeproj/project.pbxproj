@@ -20,6 +20,7 @@
 		BA526CA32F911ABD00576EC9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */; };
 		BA5CCD322F9399E00036F5D1 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */; };
 		BA5CCD342F93A1640036F5D1 /* AddMovieDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */; };
+		BA8904392F97C23C00D3B59E /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8904382F97C23C00D3B59E /* MovieManager.swift */; };
 		BA8D45792F97929D007EAE1B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D45782F97929D007EAE1B /* MyPageViewController.swift */; };
 		BA8D457B2F9792CD007EAE1B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D457A2F9792CD007EAE1B /* FirstViewController.swift */; };
 		BA8D457D2F9792E2007EAE1B /* SecandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D457C2F9792E2007EAE1B /* SecandViewController.swift */; };
@@ -62,6 +63,7 @@
 		BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieDelegate.swift; sourceTree = "<group>"; };
+		BA8904382F97C23C00D3B59E /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
 		BA8D45782F97929D007EAE1B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		BA8D457A2F9792CD007EAE1B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		BA8D457C2F9792E2007EAE1B /* SecandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecandViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		BA526C6F2F90D47A00576EC9 /* lab2_2 */ = {
 			isa = PBXGroup;
 			children = (
+				BA8904372F97C20D00D3B59E /* manage */,
 				BA8D45832F979353007EAE1B /* model */,
 				BA8D45812F979322007EAE1B /* home */,
 				BA8D45802F979304007EAE1B /* onboarding */,
@@ -153,6 +156,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA8904372F97C20D00D3B59E /* manage */ = {
+			isa = PBXGroup;
+			children = (
+				BA8904382F97C23C00D3B59E /* MovieManager.swift */,
+			);
+			path = manage;
 			sourceTree = "<group>";
 		};
 		BA8D45802F979304007EAE1B /* onboarding */ = {
@@ -330,6 +341,7 @@
 				BA526CA12F90D51E00576EC9 /* Movie.swift in Sources */,
 				BA8D457B2F9792CD007EAE1B /* FirstViewController.swift in Sources */,
 				BA526C732F90D47A00576EC9 /* SceneDelegate.swift in Sources */,
+				BA8904392F97C23C00D3B59E /* MovieManager.swift in Sources */,
 				BA5CCD342F93A1640036F5D1 /* AddMovieDelegate.swift in Sources */,
 				BA526CA32F911ABD00576EC9 /* DetailsViewController.swift in Sources */,
 				BA8D457F2F9792F2007EAE1B /* ThirdViewController.swift in Sources */,

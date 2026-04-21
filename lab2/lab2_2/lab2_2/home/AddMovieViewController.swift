@@ -20,6 +20,7 @@ class AddMovieViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func pickImageFromGallary(_ sender: UIButton) {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
         picker.delegate = self
         func imagePickerController(_ picker: UIImagePickerController,
                                    didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
