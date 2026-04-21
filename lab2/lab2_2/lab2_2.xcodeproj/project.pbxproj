@@ -127,7 +127,6 @@
 				BA526C792F90D47C00576EC9 /* Assets.xcassets */,
 				BA526C7B2F90D47C00576EC9 /* LaunchScreen.storyboard */,
 				BA526C7E2F90D47C00576EC9 /* Info.plist */,
-				BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */,
 			);
 			path = lab2_2;
 			sourceTree = "<group>";
@@ -170,6 +169,7 @@
 		BA8D45812F979322007EAE1B /* home */ = {
 			isa = PBXGroup;
 			children = (
+				BA526CA22F911ABD00576EC9 /* DetailsViewController.swift */,
 				BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */,
 				BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */,
 				BA526C742F90D47A00576EC9 /* ViewController.swift */,

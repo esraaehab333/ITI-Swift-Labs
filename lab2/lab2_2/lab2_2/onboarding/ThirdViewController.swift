@@ -13,11 +13,11 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var onboardingSubTitle3: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        onboardingImg3.image = UIImage(named: "third.ong")
+        onboardingImg3.image = UIImage(named: "third.png")
     }
     @IBAction func startBtn(_ sender: UIButton) {
-        let homeVC = storyboard?.instantiateViewController(withIdentifier: "homeVC")
-        homeVC?.modalPresentationStyle = .fullScreen
-        present(homeVC!,animated: true)
+        if let homeVC = storyboard?.instantiateViewController(identifier: "homeVC") as? ViewController {
+            navigationController?.pushViewController(homeVC, animated: true)
+        }
     }
 }

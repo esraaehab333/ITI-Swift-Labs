@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         listOfMovies.append(movie)
         tableView.reloadData()
     }
-    @IBAction func addMovie(_ sender: UIButton) {
+    @IBAction func addMovieButtonTapped(_ sender: UIButton) {
         if let addVC = storyboard?.instantiateViewController(identifier: "addMovieVC") as? AddMovieViewController {
                addVC.delegate = self
                navigationController?.pushViewController(addVC, animated: true)
@@ -22,28 +22,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var listOfMovies: [Movie] = [
         Movie(
             title: "Inception",
-            image: "Inception.jpg",
+            image: UIImage(named: "Inception")!,
             rating: 8.8,
             relaseYear: 2010,
             genre: ["Action", "Sci-Fi", "Thriller"]
         ),
         Movie(
             title: "The Dark Knight",
-            image: "The Dark Knight.jpg",
+            image: UIImage(named: "The Dark Knight")!,
             rating: 9.0,
             relaseYear: 2008,
             genre: ["Action", "Crime", "Drama"]
         ),
         Movie(
             title: "Interstellar",
-            image: "Interstellar.jpg",
+            image: UIImage(named: "Interstellar")!,
             rating: 8.6,
             relaseYear: 2014,
             genre: ["Adventure", "Drama", "Sci-Fi"]
         ),
         Movie(
             title: "The Matrix",
-            image: "Matrix.jpg",
+            image: UIImage(named: "Matrix")!,
             rating: 8.7,
             relaseYear: 1999,
             genre: ["Action", "Sci-Fi"]
@@ -54,6 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        navigationItem.hidesBackButton = true
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,11 +70,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         listOfMovies.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
-        cell.movieTitle.text = listOfMovies[indexPath.row].title
-        cell.movieImage.image = UIImage(named: listOfMovies[indexPath.row].image)
+        let movie = listOfMovies[indexPath.row]
+        cell.movieTitle.text = movie.title
+        cell.movieImage.image = movie.image
         return cell
     }
 }

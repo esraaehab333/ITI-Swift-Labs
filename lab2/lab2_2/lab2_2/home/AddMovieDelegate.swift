@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol AddMovieDelegate: NSObject {
+protocol AddMovieDelegate: AnyObject {
     func addMovie(movie:Movie)
 }
