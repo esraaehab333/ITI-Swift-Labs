@@ -7,9 +7,11 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource , AddMovieDelegate{
+    var movies: [Movie] = []
     
     func addMovie(movie: Movie) {
-        MovieManager.shared.movies.append(movie)
+        SQLiteManager.shared.insertMovie(movie: movie)
+        movies = SQLiteManager.shared.fetchMovies()
         tableView.reloadData()
     }
     @IBAction func addMovieButtonTapped(_ sender: UIButton) {
@@ -24,12 +26,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         navigationItem.hidesBackButton = true
+        movies = SQLiteManager.shared.fetchMovies()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let detailsVC = storyboard?.instantiateViewController(identifier: "detailsVC") as? DetailsViewController {
-            let selectedMovie = MovieManager.shared.movies[indexPath.row]
+            let selectedMovie = movies[indexPath.row]
             detailsVC.title = selectedMovie.title
             detailsVC.movie = selectedMovie
             navigationController?.pushViewController(detailsVC, animated: true)
@@ -37,11 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        MovieManager.shared.movies.count
+        movies.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
-        let movie = MovieManager.shared.movies[indexPath.row]
+        let movie = movies[indexPath.row]
         cell.movieTitle.text = movie.title
         cell.movieImage.image = movie.image
         return cell
