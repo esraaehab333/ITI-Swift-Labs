@@ -27,6 +27,8 @@
 		BA8D457F2F9792F2007EAE1B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D457E2F9792F2007EAE1B /* ThirdViewController.swift */; };
 		BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */; };
 		BAA2A5212F98E6DF0003E8D7 /* SqlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */; };
+		BAA2A5232F98EB940003E8D7 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA2A5222F98EB940003E8D7 /* Products.swift */; };
+		BAA2A5252F98EC090003E8D7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		BA8D457E2F9792F2007EAE1B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlManager.swift; sourceTree = "<group>"; };
+		BAA2A5222F98EB940003E8D7 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			children = (
 				BA8904382F97C23C00D3B59E /* MovieManager.swift */,
 				BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */,
+				BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */,
 			);
 			path = manage;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				BA526CA02F90D51E00576EC9 /* Movie.swift */,
+				BAA2A5222F98EB940003E8D7 /* Products.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				BA8D457D2F9792E2007EAE1B /* SecandViewController.swift in Sources */,
 				BA8D45792F97929D007EAE1B /* MyPageViewController.swift in Sources */,
 				BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */,
+				BAA2A5252F98EC090003E8D7 /* NetworkManager.swift in Sources */,
 				BAA2A5212F98E6DF0003E8D7 /* SqlManager.swift in Sources */,
 				BA526C712F90D47A00576EC9 /* AppDelegate.swift in Sources */,
 				BA526CA12F90D51E00576EC9 /* Movie.swift in Sources */,
@@ -348,6 +355,7 @@
 				BA8904392F97C23C00D3B59E /* MovieManager.swift in Sources */,
 				BA5CCD342F93A1640036F5D1 /* AddMovieDelegate.swift in Sources */,
 				BA526CA32F911ABD00576EC9 /* DetailsViewController.swift in Sources */,
+				BAA2A5232F98EB940003E8D7 /* Products.swift in Sources */,
 				BA8D457F2F9792F2007EAE1B /* ThirdViewController.swift in Sources */,
 				BA5CCD322F9399E00036F5D1 /* AddMovieViewController.swift in Sources */,
 			);
