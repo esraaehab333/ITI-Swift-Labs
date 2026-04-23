@@ -1,10 +1,3 @@
-//
-//  SqlManager.swift
-//  lab2_2
-//
-//  Created by Nemo on 22/04/2026.
-//
-
 import UIKit
 import SQLite3
 
@@ -38,7 +31,7 @@ class SQLiteManager {
             rating REAL,
             year INTEGER,
             genre TEXT,
-            image BLOB
+            image TEXT
         );
         """
         var statement: OpaquePointer?
@@ -46,6 +39,35 @@ class SQLiteManager {
             sqlite3_step(statement)
         }
         sqlite3_finalize(statement)
+    }
+    
+    func saveImageToDocuments(image: UIImage) -> String? {
+        let fileName = UUID().uuidString + ".jpg"
+        
+        let url = FileManager.default
+            .urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent(fileName)
+        
+        if let data = image.jpegData(compressionQuality: 0.8) {
+            do {
+                try data.write(to: url)
+                return fileName
+            } catch {
+                print("Error saving image:", error)
+            }
+        }
+        return nil
+    }
+    
+    func loadImageFromDocuments(fileName: String) -> UIImage {
+        let url = FileManager.default
+            .urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent(fileName)
+        if let data = try? Data(contentsOf: url),
+           let image = UIImage(data: data) {
+            return image
+        }
+        return UIImage()
     }
     
     func insertMovie(movie: Movie) {
@@ -57,8 +79,8 @@ class SQLiteManager {
             sqlite3_bind_int(statement, 3, Int32(movie.relaseYear))
             let genres = movie.genre.joined(separator: ",")
             sqlite3_bind_text(statement, 4, (genres as NSString).utf8String, -1, nil)
-            if let imageData = movie.image.jpegData(compressionQuality: 0.8) {
-                sqlite3_bind_blob(statement, 5, (imageData as NSData).bytes, Int32(imageData.count), nil)
+            if let fileName = saveImageToDocuments(image: movie.image) {
+                sqlite3_bind_text(statement, 5, (fileName as NSString).utf8String, -1, nil)
             }
             if sqlite3_step(statement) == SQLITE_DONE {
                 print("Inserted")
@@ -78,10 +100,8 @@ class SQLiteManager {
                 let year = Int(sqlite3_column_int(statement, 3))
                 let genreText = String(cString: sqlite3_column_text(statement, 4))
                 let genres = genreText.components(separatedBy: ",")
-                let blob = sqlite3_column_blob(statement, 5)
-                let size = sqlite3_column_bytes(statement, 5)
-                let data = Data(bytes: blob!, count: Int(size))
-                let image = UIImage(data: data) ?? UIImage()
+                let imageName = String(cString: sqlite3_column_text(statement, 5))
+                let image = loadImageFromDocuments(fileName: imageName)
                 let movie = Movie(
                     title: title,
                     image: image,
