@@ -13,19 +13,21 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchProducts(completion: @escaping ([Product]) -> Void) {
-        guard let url = URL(string: "https://dummyjson.com/products") else { return }
+    func fetchMovies(completion: @escaping ([Movie]) -> Void) {
+        guard let url = URL(string: "https://fooapi.com/api/movies") else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                do {
-                    let result = try JSONDecoder().decode(ProductResponse.self, from: data)
-                    DispatchQueue.main.async {
-                        completion(result.products)
-                    }
-                    
-                } catch {
-                    print("Decode error:", error)
+            if let error = error {
+                print("Error:", error)
+                return
+            }
+            guard let data = data else { return }
+            do {
+                let result = try JSONDecoder().decode(MovieResponse.self, from: data)
+                DispatchQueue.main.async {
+                    completion(result.data)
                 }
+            } catch {
+                print("Decode error:", error)
             }
         }.resume()
     }

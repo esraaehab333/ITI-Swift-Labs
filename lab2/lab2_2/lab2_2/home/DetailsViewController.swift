@@ -6,38 +6,27 @@
 //
 
 import UIKit
+import SDWebImage
+
 class DetailsViewController: UIViewController {
+    
     @IBOutlet weak var movieType: UILabel!
     @IBOutlet weak var movieRate: UILabel!
     @IBOutlet weak var movieYear: UILabel!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
-    //var movie: Movie?
-    var product: Product?
+    var movie: Movie?
     override func viewDidLoad() {
         super.viewDidLoad()
-       /* if let movie = movie {
+        if let movie = movie {
             movieTitle.text = movie.title
-            movieYear.text = "\(movie.relaseYear)"
-            movieRate.text = "\(movie.rating)"
-            movieImage.image = movie.image
-            movieType.text = movie.genre.joined(separator: ", ")
-        }*/
-        if let product = product {
-            movieTitle.text = product.title
-            movieYear.text = product.description
-            movieRate.text = "\(product.price)$"
-            loadImage(urlString: product.thumbnail)
+            movieYear.text = movie.year
+            movieRate.text = movie.imdbRating
+            movieType.text = movie.genre
+            movieImage.sd_setImage(
+                with: URL(string: movie.poster),
+                placeholderImage: UIImage(named: "placeholder")
+            )
         }
     }
-    func loadImage(urlString: String) {
-            guard let url = URL(string: urlString) else { return }
-            URLSession.shared.dataTask(with: url) { data, _, _ in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        self.movieImage.image = UIImage(data: data)
-                    }
-                }
-            }.resume()
-        }
 }

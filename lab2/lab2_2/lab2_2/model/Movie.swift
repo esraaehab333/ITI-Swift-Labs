@@ -1,15 +1,18 @@
 import UIKit
-class Movie {
-    var title: String
-    var image: UIImage
-    var rating: Float
-    var relaseYear: Int
-    var genre: [String]
-    init(title: String, image: UIImage, rating: Float, relaseYear: Int, genre: [String]) {
+
+class Movie: Codable {
+    let id: String
+    let title: String
+    let year: String
+    let genre: String
+    let imdbRating: String
+    let poster: String
+    init(id: String, title: String, year: String, genre: String, imdbRating: String, poster: String) {
+        self.id = id
         self.title = title
-        self.image = image
-        self.rating = rating
-        self.relaseYear = relaseYear
+        self.year = year
         self.genre = genre
+        self.imdbRating = imdbRating
+        self.poster = poster
     }
 }
