@@ -23,6 +23,8 @@
 		BA8CB2A32F9A3F400057C5E8 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CB2A22F9A3F400057C5E8 /* MovieResponse.swift */; };
 		BA8CB2A62F9A420B0057C5E8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BA8CB2A52F9A420B0057C5E8 /* SDWebImage */; };
 		BA8CB2A82F9A420B0057C5E8 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BA8CB2A72F9A420B0057C5E8 /* SDWebImageMapKit */; };
+		BA8CB2EA2F9A48B80057C5E8 /* MovieCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA8CB2E82F9A48B80057C5E8 /* MovieCoreData.xcdatamodeld */; };
+		BA8CB2EC2F9A4A070057C5E8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8CB2EB2F9A4A070057C5E8 /* CoreDataManager.swift */; };
 		BA8D45792F97929D007EAE1B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D45782F97929D007EAE1B /* MyPageViewController.swift */; };
 		BA8D457B2F9792CD007EAE1B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D457A2F9792CD007EAE1B /* FirstViewController.swift */; };
 		BA8D457D2F9792E2007EAE1B /* SecandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D457C2F9792E2007EAE1B /* SecandViewController.swift */; };
@@ -30,6 +32,7 @@
 		BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */; };
 		BAA2A5212F98E6DF0003E8D7 /* SqlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */; };
 		BAA2A5252F98EC090003E8D7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */; };
+		BABAA8612F9E251100E863CE /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABAA8602F9E251100E863CE /* UIImageExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,8 @@
 		BA5CCD312F9399E00036F5D1 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		BA5CCD332F93A1640036F5D1 /* AddMovieDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieDelegate.swift; sourceTree = "<group>"; };
 		BA8CB2A22F9A3F400057C5E8 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		BA8CB2E92F9A48B80057C5E8 /* MovieCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieCoreData.xcdatamodel; sourceTree = "<group>"; };
+		BA8CB2EB2F9A4A070057C5E8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BA8D45782F97929D007EAE1B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		BA8D457A2F9792CD007EAE1B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		BA8D457C2F9792E2007EAE1B /* SecandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecandViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		BA8DBF162F94F8B2001A5E01 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlManager.swift; sourceTree = "<group>"; };
 		BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BABAA8602F9E251100E863CE /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		BA526C6F2F90D47A00576EC9 /* lab2_2 */ = {
 			isa = PBXGroup;
 			children = (
+				BABAA8602F9E251100E863CE /* UIImageExtention.swift */,
 				BA8904372F97C20D00D3B59E /* manage */,
 				BA8D45832F979353007EAE1B /* model */,
 				BA8D45812F979322007EAE1B /* home */,
@@ -138,6 +145,7 @@
 				BA526C792F90D47C00576EC9 /* Assets.xcassets */,
 				BA526C7B2F90D47C00576EC9 /* LaunchScreen.storyboard */,
 				BA526C7E2F90D47C00576EC9 /* Info.plist */,
+				BA8CB2E82F9A48B80057C5E8 /* MovieCoreData.xcdatamodeld */,
 			);
 			path = lab2_2;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			children = (
 				BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */,
 				BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */,
+				BA8CB2EB2F9A4A070057C5E8 /* CoreDataManager.swift */,
 			);
 			path = manage;
 			sourceTree = "<group>";
@@ -349,8 +358,11 @@
 				BA8D457D2F9792E2007EAE1B /* SecandViewController.swift in Sources */,
 				BA8D45792F97929D007EAE1B /* MyPageViewController.swift in Sources */,
 				BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */,
+				BA8CB2EC2F9A4A070057C5E8 /* CoreDataManager.swift in Sources */,
 				BAA2A5252F98EC090003E8D7 /* NetworkManager.swift in Sources */,
+				BA8CB2EA2F9A48B80057C5E8 /* MovieCoreData.xcdatamodeld in Sources */,
 				BAA2A5212F98E6DF0003E8D7 /* SqlManager.swift in Sources */,
+				BABAA8612F9E251100E863CE /* UIImageExtention.swift in Sources */,
 				BA526C712F90D47A00576EC9 /* AppDelegate.swift in Sources */,
 				BA526CA12F90D51E00576EC9 /* Movie.swift in Sources */,
 				BA8D457B2F9792CD007EAE1B /* FirstViewController.swift in Sources */,
@@ -719,6 +731,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		BA8CB2E82F9A48B80057C5E8 /* MovieCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA8CB2E92F9A48B80057C5E8 /* MovieCoreData.xcdatamodel */,
+			);
+			currentVersion = BA8CB2E92F9A48B80057C5E8 /* MovieCoreData.xcdatamodel */;
+			path = MovieCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BA526C652F90D47900576EC9 /* Project object */;
 }

@@ -160,7 +160,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="movieImageView" destination="d5Z-S4-Sad" id="JrE-V0-TYv"/>
+                        <outlet property="movieImageView" destination="d5Z-S4-Sad" id="u77-S2-fOm"/>
                         <outlet property="movieName" destination="WDR-aF-QvV" id="xM6-H6-4tW"/>
                         <outlet property="movieRate" destination="4yr-YV-Ajy" id="f6j-pu-lxG"/>
                         <outlet property="movieType" destination="YGR-by-Rvg" id="P22-ps-z4p"/>

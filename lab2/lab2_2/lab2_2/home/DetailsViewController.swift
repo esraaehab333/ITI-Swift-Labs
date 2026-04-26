@@ -23,10 +23,7 @@ class DetailsViewController: UIViewController {
             movieYear.text = movie.year
             movieRate.text = movie.imdbRating
             movieType.text = movie.genre
-            movieImage.sd_setImage(
-                with: URL(string: movie.poster),
-                placeholderImage: UIImage(named: "placeholder")
-            )
+            movieImage.loadImage(movie.poster)
         }
     }
 }

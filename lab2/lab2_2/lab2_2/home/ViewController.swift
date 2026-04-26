@@ -6,38 +6,56 @@
 //
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddMovieDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource , AddMovieDelegate{
     
     var movies: [Movie] = []
     @IBOutlet weak var tableView: UITableView!
-    func addMovie(movie: Movie) {
-        SQLiteManager.shared.insertMovie(movie: movie)
-        movies = SQLiteManager.shared.fetchMovies()
-        tableView.reloadData()
-    }
-    @IBAction func addMovieButtonTapped(_ sender: UIButton) {
-        if let addVC = storyboard?.instantiateViewController(identifier: "addMovieVC") as? AddMovieViewController {
-            addVC.delegate = self
-            navigationController?.pushViewController(addVC, animated: true)
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         navigationItem.hidesBackButton = true
-       // movies = SQLiteManager.shared.fetchMovies()
         fetchData()
     }
+    
+    func isConnectedToInternet() -> Bool {
+        return false
+    }
+    
     func fetchData() {
-        NetworkManager.shared.fetchMovies { movies in
-            self.movies = movies
-            self.tableView.reloadData()
+        if isConnectedToInternet() {
+            NetworkManager.shared.fetchMovies { [weak self] movies in
+                guard let self = self else { return }
+                CoreDataManager.shared.saveMovies(movies)
+                DispatchQueue.main.async {
+                    self.movies = CoreDataManager.shared.fetchMovies()
+                    self.tableView.reloadData()
+                }
+            }
+        } else {
+            movies = CoreDataManager.shared.fetchMovies()
+            tableView.reloadData()
         }
     }
+    
+    @IBAction func addMovieButtonTapped(_ sender: UIBarButtonItem) {
+        if let addVC = storyboard?.instantiateViewController(identifier: "addMovieVC") as? AddMovieViewController {
+               addVC.delegate = self
+               navigationController?.pushViewController(addVC, animated: true)
+           }
+    }
+        
+    func addMovie(movie: Movie) {
+        CoreDataManager.shared.saveMovies([movie])
+        movies = CoreDataManager.shared.fetchMovies()
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if let detailsVC = storyboard?.instantiateViewController(identifier: "detailsVC") as? DetailsViewController {
@@ -46,13 +64,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             navigationController?.pushViewController(detailsVC, animated: true)
         }
     }
-    func tableView(_ tableView: UITableView,cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         let movie = movies[indexPath.row]
         cell.movieTitle.text = movie.title
-        if let url = URL(string: movie.poster) {
-            cell.movieImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
-        }
+        cell.movieImage.loadImage(movie.poster)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let movieToDelete = movies[indexPath.row]
+            CoreDataManager.shared.deleteMovie(id: movieToDelete.id)
+            movies.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
