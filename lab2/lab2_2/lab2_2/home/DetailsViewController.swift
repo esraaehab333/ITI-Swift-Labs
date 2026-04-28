@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UITableViewController {
     
     @IBOutlet weak var movieType: UILabel!
     @IBOutlet weak var movieRate: UILabel!
