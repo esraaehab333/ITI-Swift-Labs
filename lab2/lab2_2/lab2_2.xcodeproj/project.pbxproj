@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA37A4E02FA22495005100AE /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA37A4DF2FA22495005100AE /* NetworkChecker.swift */; };
 		BA526C712F90D47A00576EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526C702F90D47A00576EC9 /* AppDelegate.swift */; };
 		BA526C732F90D47A00576EC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526C722F90D47A00576EC9 /* SceneDelegate.swift */; };
 		BA526C752F90D47A00576EC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA526C742F90D47A00576EC9 /* ViewController.swift */; };
@@ -53,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA37A4DC2FA21C06005100AE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		BA37A4DE2FA21D70005100AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		BA37A4DF2FA22495005100AE /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		BA526C6D2F90D47A00576EC9 /* lab2_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab2_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA526C702F90D47A00576EC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA526C722F90D47A00576EC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				BAA2A5202F98E6DF0003E8D7 /* SqlManager.swift */,
 				BAA2A5242F98EC090003E8D7 /* NetworkManager.swift */,
 				BA8CB2EB2F9A4A070057C5E8 /* CoreDataManager.swift */,
+				BA37A4DF2FA22495005100AE /* NetworkChecker.swift */,
 			);
 			path = manage;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = BA526C642F90D47900576EC9;
 			packageReferences = (
@@ -356,6 +362,7 @@
 			files = (
 				BA526C752F90D47A00576EC9 /* ViewController.swift in Sources */,
 				BA8D457D2F9792E2007EAE1B /* SecandViewController.swift in Sources */,
+				BA37A4E02FA22495005100AE /* NetworkChecker.swift in Sources */,
 				BA8D45792F97929D007EAE1B /* MyPageViewController.swift in Sources */,
 				BA8DBF172F94F8B2001A5E01 /* MyTableViewCell.swift in Sources */,
 				BA8CB2EC2F9A4A070057C5E8 /* CoreDataManager.swift in Sources */,
@@ -412,6 +419,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				BA526C772F90D47A00576EC9 /* Base */,
+				BA37A4DC2FA21C06005100AE /* ar */,
+				BA37A4DE2FA21D70005100AE /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -431,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -491,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

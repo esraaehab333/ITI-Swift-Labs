@@ -1,0 +1,78 @@
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "1jB-lB-Loh"; */
+"1jB-lB-Loh.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1jB-lB-Loh"; */
+"1jB-lB-Loh.normalTitle" = "Button";
+
+/* Class = "UITableViewSection"; headerTitle = "Section-1"; ObjectID = "3Dh-ae-E2j"; */
+"3Dh-ae-E2j.headerTitle" = "Section-1";
+
+/* Class = "UILabel"; text = "genre"; ObjectID = "ATj-Wl-gFh"; */
+"ATj-Wl-gFh.text" = "genre";
+
+/* Class = "UILabel"; text = "Unlimited Stories "; ObjectID = "JEE-aT-RIc"; */
+"JEE-aT-RIc.text" = "Unlimited Stories ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JHc-2o-OkN"; */
+"JHc-2o-OkN.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Lets Start"; ObjectID = "OhD-Fs-Cs9"; */
+"OhD-Fs-Cs9.configuration.title" = "Lets Start";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OhD-Fs-Cs9"; */
+"OhD-Fs-Cs9.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Movie Image"; ObjectID = "QwC-XF-LNV"; */
+"QwC-XF-LNV.text" = "Movie Image";
+
+/* Class = "UILabel"; text = "Movie Year"; ObjectID = "Rd0-rj-fBa"; */
+"Rd0-rj-fBa.text" = "Movie Year";
+
+/* Class = "UILabel"; text = "year"; ObjectID = "UWZ-AW-P65"; */
+"UWZ-AW-P65.text" = "year";
+
+/* Class = "UILabel"; text = "Browse, watch, and enjoy movies without limits."; ObjectID = "WGI-he-32n"; */
+"WGI-he-32n.text" = "Browse, watch, and enjoy movies without limits.";
+
+/* Class = "UILabel"; text = "Movie Rate"; ObjectID = "ZbM-Tn-Gv4"; */
+"ZbM-Tn-Gv4.text" = "Movie Rate";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "a7C-jt-9bC"; */
+"a7C-jt-9bC.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Pick"; ObjectID = "eUh-uL-YRa"; */
+"eUh-uL-YRa.configuration.title" = "Pick";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "eUh-uL-YRa"; */
+"eUh-uL-YRa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "rate"; ObjectID = "gCo-jL-Uck"; */
+"gCo-jL-Uck.text" = "rate";
+
+/* Class = "UILabel"; text = "From blockbusters to hidden gems, dive into the world of movies."; ObjectID = "jqF-Kq-meE"; */
+"jqF-Kq-meE.text" = "From blockbusters to hidden gems, dive into the world of movies.";
+
+/* Class = "UILabel"; text = "Movie Type"; ObjectID = "mhN-nu-n6v"; */
+"mhN-nu-n6v.text" = "Movie Type";
+
+/* Class = "UIButton"; configuration.title = "+"; ObjectID = "mw3-FI-Xso"; */
+"mw3-FI-Xso.configuration.title" = "+";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mw3-FI-Xso"; */
+"mw3-FI-Xso.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Discover Movies You’ll Love"; ObjectID = "s3J-kS-2XV"; */
+"s3J-kS-2XV.text" = "Discover Movies You’ll Love";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "sRu-h9-w7K"; */
+"sRu-h9-w7K.text" = "Title";
+
+/* Class = "UILabel"; text = "Browse, stream, and enjoy endless stories—all in one place."; ObjectID = "uB6-4t-oGt"; */
+"uB6-4t-oGt.text" = "Browse, stream, and enjoy endless stories—all in one place.";
+
+/* Class = "UILabel"; text = "Your Cinema, Anytime"; ObjectID = "wj8-7G-wjH"; */
+"wj8-7G-wjH.text" = "Your Cinema, Anytime";
+
+/* Class = "UILabel"; text = "Movie Title"; ObjectID = "xkY-yn-neF"; */
+"xkY-yn-neF.text" = "Movie Title";

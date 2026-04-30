@@ -5,7 +5,7 @@
 //  Created by Nemo on 16/04/2026.
 //
 import UIKit
-
+import Network
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource , AddMovieDelegate{
     
     var movies: [Movie] = []
@@ -18,13 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationItem.hidesBackButton = true
         fetchData()
     }
-    
-    func isConnectedToInternet() -> Bool {
-        return false
-    }
-    
     func fetchData() {
-        if isConnectedToInternet() {
+        if NetworkChecker.shared.isConnected{
             NetworkManager.shared.fetchMovies { [weak self] movies in
                 guard let self = self else { return }
                 CoreDataManager.shared.saveMovies(movies)
@@ -36,9 +31,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             movies = CoreDataManager.shared.fetchMovies()
             tableView.reloadData()
+            showOfflineAlert()
         }
     }
-    
+    func showOfflineAlert() {
+        let alert = UIAlertController(
+            title: "No Connection",
+            message: "You are currently viewing pre-loaded offline data.",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
     @IBAction func addMovieButtonTapped(_ sender: UIBarButtonItem) {
         if let addVC = storyboard?.instantiateViewController(identifier: "addMovieVC") as? AddMovieViewController {
                addVC.delegate = self

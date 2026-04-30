@@ -14,7 +14,7 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var movieTitle:UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        movieImage.layer.cornerRadius = movieImage.frame.height / 2
+        movieImage.layer.cornerRadius = 15
         movieImage.clipsToBounds = true
         movieImage.contentMode = .scaleAspectFill
     }
